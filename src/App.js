@@ -12,7 +12,6 @@ class App extends Component {
     otherState: 'some other value',
     showPerson: false
   }
-//gfsfdgs
 
   deletePersonHandler =(personIndex)=>{
     const persons = this.state.persons;
