@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.css';
 import Person from './Person/Person.js';
+
 
 class App extends Component {
   state = {
@@ -46,11 +47,13 @@ class App extends Component {
   render() {
 
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
+      color: 'white',
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      
     };
 
     let persons = null;
@@ -67,23 +70,35 @@ class App extends Component {
               changed={(event) => this.nameChangedHandler(event,person.id)} 
               />
           })}
-
-
         </div>
+      );
 
-      )
+      style.backgroundColor = 'red';
+      
+    }
+
+    const assignedClasses = [];
+    if (this.state.persons.length <= 2){
+      assignedClasses.push(classes.red); //classes will be red
+    }
+    if (this.state.persons.length <= 1){
+      assignedClasses.push(classes.bold); // classes = ['red','bold']
     }
 
 
     return (
-      <div className="App">
+      
+      <div className={classes.App}>
+
+        <p className={assignedClasses.join('')}>
+          This is working</p>
 
         <button
           style={style}
           onClick={this.togglePersonHandler}>
           Toggle Person</button>
 
-       {persons}
+        {persons}
 
       </div>
 
