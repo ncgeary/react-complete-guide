@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css' import Person from './Person/Person.js'
+import './App.css';
+import Person from './Person/Person.js';
 
 class App extends Component {
   state = {
@@ -11,6 +12,7 @@ class App extends Component {
     otherState: 'some other value',
     showPerson: false
   }
+//gfsfdgs
 
   deletePersonHandler =(personIndex)=>{
     const persons = this.state.persons;
