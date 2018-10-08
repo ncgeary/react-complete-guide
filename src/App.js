@@ -19,7 +19,7 @@ class App extends Component {
     persons.splice(personIndex, 1);
     this.setState({persons:persons})
   }
-//hoihoho
+
 
   nameChangedHandler = (event) => {
     this.setState({
