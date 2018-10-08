@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css' import Person from './Person/Person.js'
+import './App.css';
+import Person from './Person/Person.js';
 
 class App extends Component {
   state = {
@@ -17,7 +18,7 @@ class App extends Component {
     persons.splice(personIndex, 1);
     this.setState({persons:persons})
   }
-//hoihoho
+
 
   nameChangedHandler = (event) => {
     this.setState({
